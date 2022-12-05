@@ -1,23 +1,24 @@
 import { Box, IconButton, useTheme } from  "@mui/material";
 import {useContext} from "react";
-import { ColorModeContext, tokens} from "../../theme";
-import InputBase from "@mui/material/InputBase";
+import { ColorModeContext} from "../../theme";
+// import InputBase from "@mui/material/InputBase";
 import LightModeOutLinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutLinedIcon from "@mui/icons-material/DarkModeOutlined";
-import NotificationsOutLinedIcon from "@mui/icons-material/NotificationsOutlined";
+// import NotificationsOutLinedIcon from "@mui/icons-material/NotificationsOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutLinedIcon from "@mui/icons-material/PersonOutlined";
-import SearchIcon from "@mui/icons-material/Search";
+// import SearchIcon from "@mui/icons-material/Search";
+import ExportPdf from "../../components/ExportPdf";
 
 const Topbar = () => {
     const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
+    // const colors = tokens(theme.palette.mode);
     const colorMode = useContext(ColorModeContext);
 
 
     return (
 
-    <Box display="flex" justifyContent="flex-end" p={2}>
+    <Box display="flex" justifyContent="space-between" p={2}>
 
     {/* SEARCH BAR */}
 
@@ -31,6 +32,10 @@ const Topbar = () => {
             <SearchIcon/>
         </IconButton>
     </Box> */}
+
+    {/* Dowmload PDF */}
+
+    <ExportPdf rootElementId="capture" downloadFileName="testpage" />
 
     {/* ICONS */}
 
