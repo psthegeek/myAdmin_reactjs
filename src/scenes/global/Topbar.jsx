@@ -35,7 +35,7 @@ const Topbar = () => {
 
     {/* Dowmload PDF */}
 
-    <ExportPdf rootElementId="capture" downloadFileName="testpage" />
+    <ExportPdf rootElementId="capture" downloadFileName="downloadpage" />
 
     {/* ICONS */}
 
